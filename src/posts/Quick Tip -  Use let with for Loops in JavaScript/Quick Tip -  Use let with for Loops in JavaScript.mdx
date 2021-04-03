@@ -44,7 +44,7 @@ However, after one second, this entire loop has already gone through every itera
 
 The problem with that is that by the time the first `setTimeout() runs, i` is already at 10, and we don't have any way to reference it.
 
-If you had an AJAX request where you are looping through a few of them, there isn't any way without an IFFE to reference what the `i` variable was when it ran, not what it currently is after the loop.
+If you had an AJAX request where you are looping through a few of them, there isn't any way without an IIFE to reference what the `i` variable was when it ran, not what it currently is after the loop.
 
 One quick way we can fix that is if we just change `var to let`:
 
